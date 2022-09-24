@@ -19,7 +19,7 @@ body header .row .menu ul li a {
   color: #202142;
   opacity: 0.7;
 }
-body header .row .menu ul li a:focus {
+body header .row .menu ul li a:hover {
   padding: 10px 15px 10px 16px;
   width: 133px;
   height: 44px;
@@ -78,7 +78,7 @@ body main .search {
   margin: 0 auto;
 }
 body nav .scroll-by ul {
-  background-color: #FCFCFF;
+  background-color: #EFEFFF;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -101,13 +101,14 @@ body nav .scroll-by ul li a {
   width: 107px;
   height: 51px;
 }
-body nav .scroll-by ul li a:focus {
+body nav .scroll-by ul li a:hover {
   padding: 15px 30px;
   border: 1px solid #EFEFFF;
   box-shadow: 0px 10px 15px -10px rgba(2, 5, 132, 0.05);
   border-radius: 45px;
   color: #202142;
   background: #FFFFFF;
+  opacity: 1;
 }
 body nav .menu-bar ul {
   display: flex;
@@ -122,17 +123,23 @@ body nav .menu-bar ul li a {
   text-decoration: none;
   color: #202142;
   opacity: 0.7;
+  width: 49px;
+  height: 44px;
 }
-body nav .menu-bar ul li a:focus {
+body nav .menu-bar ul li a:hover {
   background: #FCFCFF;
   border: 1px solid #EFEFFF;
   border-radius: 32px;
-  width: 49px;
-  height: 44px;
+  padding: 0.5em;
   color: #202142;
+  opacity: 1;
+}
+body nav .app-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 auto;
 }
 body nav .app-bar ul {
-  justify-content: flex-end;
   display: flex;
   flex-direction: row;
 }
@@ -151,11 +158,27 @@ body nav .app-bar ul li {
 body nav .app-bar ul .gab {
   border: 1px solid #FF6A95 !important;
 }
+body nav .app-bar .dropright button {
+  color: white;
+  background-color: #202142;
+}
 body article .art .art_images {
-  width: 400px;
-  height: 300px;
+  width: 90%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 body article .art.bottom .mask {
   height: auto;
   width: auto;
+}
+body article .art.bottom .p-con p {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 auto !important;
 }/*# sourceMappingURL=main.css.map */

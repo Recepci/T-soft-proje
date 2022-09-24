@@ -38,7 +38,7 @@
                                 text-decoration: $try;
                                 color: $color;
                                 opacity: 0.7;
-                                &:focus {
+                                &:hover {
                                     padding: 10px 15px 10px 16px;
                                     width: 133px;
                                     height: 44px;
@@ -105,7 +105,7 @@
         nav {
             .scroll-by {
                 ul {
-                    background-color: #FCFCFF;
+                    background-color: #EFEFFF;
                     display: flex;
                     flex-direction: row;
                     align-items: flex-start;
@@ -125,13 +125,14 @@
                             opacity: 0.7;
                             width: 107px;
                             height: 51px;
-                            &:focus {
+                            &:hover {
                                 padding: 15px 30px;
                                 border: 1px solid #EFEFFF;
                                 box-shadow: 0px 10px 15px -10px rgba(2, 5, 132, 0.05);
                                 border-radius: 45px;
                                 color: $color;
                                 background: #FFFFFF;
+                                opacity: 1;
                             }
                         }
                     }
@@ -148,21 +149,25 @@
                             text-decoration: $try;
                             color: $color;
                             opacity: 0.7;
-                            &:focus {
+                            width: 49px;
+                            height: 44px;
+                            &:hover {
                                 background: #FCFCFF;
                                 border: 1px solid #EFEFFF;
                                 border-radius: 32px;
-                                width: 49px;
-                                height: 44px;
+                                padding: 0.5em;
                                 color: $color;
+                                opacity: 1;
                             }
                         }
                     }
                 }
             }
             .app-bar {
+                display: flex;
+                justify-content: flex-end;
+                margin: 0 auto;
                 ul {
-                    justify-content: flex-end;
                     @include them();
                     li {
                         width: 50px;
@@ -178,18 +183,37 @@
                         border: 1px solid $color2 !important;
                     }
                 }
+                .dropright {
+                    button {
+                        color: white;
+                        background-color: $color;
+                    }
+                }
             }
         }
         article {
             .art {
                 .art_images {
-                    width: 400px;
-                    height: 300px;
+                    width: 90%;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 auto;
+                    object-fit: cover;
                 }
                 &.bottom {
                     .mask {
                         height: auto;
                         width: auto;
+                    }
+                    .p-con {
+                        p {
+                            display: flex !important;
+                            align-items: center !important;
+                            justify-content: center !important;
+                            margin: 0 auto !important;
+                        }
                     }
                 }
             }
