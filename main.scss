@@ -1,0 +1,197 @@
+    $color:#202142;
+    $color1:white;
+    $color2:#FF6A95;
+    $color3:#f1f1fd;
+    $try:none;
+    $font:normal;
+    @mixin theme {
+        text-align: center;
+        color: $color;
+    }
+    
+    @mixin them {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    @mixin sub {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    body {
+        margin: 0px;
+        padding: 0px;
+        background-color: black;
+        font-family: 'Poppins', sans-serif !important;
+        overflow-x: hidden !important;
+        header {
+            .row {
+                justify-content: space-around;
+                .menu {
+                    ul {
+                        list-style: $try;
+                        li {
+                            margin-right: 2rem;
+                            a {
+                                text-decoration: $try;
+                                color: $color;
+                                opacity: 0.7;
+                                &:focus {
+                                    padding: 10px 15px 10px 16px;
+                                    width: 133px;
+                                    height: 44px;
+                                    background: $color3;
+                                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                                    border-radius: 32px;
+                                    color: $color;
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+                ul {
+                    list-style: $try;
+                    color: $color;
+                    .btn {
+                        background-color: $color;
+                        color: $color1;
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+        main {
+            background-color: #FCFCFF;
+            width: 100%;
+            border-top: 1px solid #EFEFFF;
+            .area {
+                .area_one {
+                    color: $color2;
+                }
+                .area_two {
+                    margin-bottom: 3rem;
+                    h2 {
+                        font-style: $font;
+                        font-weight: 700;
+                        font-size: 22px;
+                        line-height: 33px;
+                        @include theme();
+                        margin-top: 3.5rem;
+                    }
+                    p {
+                        font-style: $font;
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 27px;
+                        @include theme();
+                    }
+                }
+            }
+            .search {
+                height: 74px;
+                width: 651px;
+                border: 1px solid #EFEFFF;
+                box-shadow: 0px 16px 35px -15px rgba(2, 5, 132, 0.15);
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto;
+            }
+        }
+        nav {
+            .scroll-by {
+                ul {
+                    background-color: #FCFCFF;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    border: 1px solid #EFEFFF;
+                    border-radius: 70px;
+                    width: 226px;
+                    height: 51px;
+                    align-items: center;
+                    justify-content: space-around;
+                    overflow: hidden;
+                    li {
+                        list-style: $try;
+                        padding: 5px;
+                        a {
+                            text-decoration: $try;
+                            color: $color;
+                            opacity: 0.7;
+                            width: 107px;
+                            height: 51px;
+                            &:focus {
+                                padding: 15px 30px;
+                                border: 1px solid #EFEFFF;
+                                box-shadow: 0px 10px 15px -10px rgba(2, 5, 132, 0.05);
+                                border-radius: 45px;
+                                color: $color;
+                                background: #FFFFFF;
+                            }
+                        }
+                    }
+                }
+            }
+            .menu-bar {
+                ul {
+                    @include them();
+                    margin: 10px 0px 0px 3rem;
+                    li {
+                        list-style: $try;
+                        margin-right: 2rem;
+                        a {
+                            text-decoration: $try;
+                            color: $color;
+                            opacity: 0.7;
+                            &:focus {
+                                background: #FCFCFF;
+                                border: 1px solid #EFEFFF;
+                                border-radius: 32px;
+                                width: 49px;
+                                height: 44px;
+                                color: $color;
+                            }
+                        }
+                    }
+                }
+            }
+            .app-bar {
+                ul {
+                    justify-content: flex-end;
+                    @include them();
+                    li {
+                        width: 50px;
+                        height: 50px;
+                        background: #FCFCFF;
+                        border: 1px solid #EFEFFF;
+                        border-radius: 70px;
+                        list-style: $try;
+                        margin-right: 2rem;
+                        @include sub();
+                    }
+                    .gab {
+                        border: 1px solid $color2 !important;
+                    }
+                }
+            }
+        }
+        article {
+            .art {
+                .art_images {
+                    width: 400px;
+                    height: 300px;
+                }
+                &.bottom {
+                    .mask {
+                        height: auto;
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }
