@@ -38,6 +38,17 @@ body header .row ul .btn {
   color: white;
   border-radius: 10px;
 }
+body header .row .drop {
+  display: flex;
+  justify-content: flex-end;
+}
+body header .row .drop .dropleft .dropdown ul li {
+  opacity: 0.7;
+}
+body header .row .drop .dropleft .dropdown ul li:hover {
+  font-size: 18px;
+  color: #202142;
+}
 body main {
   background-color: #FCFCFF;
   width: 100%;
@@ -158,9 +169,19 @@ body nav .app-bar ul li {
 body nav .app-bar ul .gab {
   border: 1px solid #FF6A95 !important;
 }
+body nav .app-bar .dropright {
+  margin-top: 0.6;
+}
 body nav .app-bar .dropright button {
   color: white;
   background-color: #202142;
+}
+@media (max-width: 768px) {
+  body nav .scroll-by,
+body nav .menu-bar,
+body nav .app-bar {
+    font-size: 10px;
+  }
 }
 body article .art .art_images {
   width: 90%;
