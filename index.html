@@ -219,13 +219,17 @@
         const listItem = document.querySelectorAll('.list-group-item');
         listItem.forEach((item) => {
             let text = item.textContent;
+
             if (text.toLowerCase().includes(filter.toLowerCase())) {
+
                 item.style.display = '';
 
             } else {
                 item.style.display = 'none';
             }
+
         });
+
     }
 </script>
 
