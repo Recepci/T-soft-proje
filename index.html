@@ -99,12 +99,12 @@
                             <form action="index.html" method="get">
                                 <input class="form-control" type="text" name="Search" placeholder="Search" id="search-input">
                                 <ul class="list-group list-group-flush text-primary">
-                                    <li class="list-group-item p3">Ubuntu Deskop</li>
-                                    <li class="list-group-item p3">Ubuntu Serve</li>
-                                    <li class="list-group-item p3">Ubuntu Serve</li>
-                                    <li class="list-group-item p3">Download</li>
-                                    <li class="list-group-item p3">Trello</li>
-                                    <li class="list-group-item p3">Asana</li>
+                                    <li class="list-group-item p3"><a href="#">Ubuntu Deskop</a></li>
+                                    <li class="list-group-item p3"><a href="#">Ubuntu Serve</a></li>
+                                    <li class="list-group-item p3"><a href="#">Ubuntu Serve</a></li>
+                                    <li class="list-group-item p3"><a href="#">Download</a></li>
+                                    <li class="list-group-item p3"><a href="#">Trello</a></li>
+                                    <li class="list-group-item p3"><a href="#">Asana</a></li>
                                 </ul>
                             </form>
                         </div>
@@ -220,6 +220,9 @@
         listItem.forEach((item) => {
             let text = item.textContent;
 
+            if (searchInput.value.length === false) {
+                item.style.display = "none";
+            }
             if (text.toLowerCase().includes(filter.toLowerCase())) {
 
                 item.style.display = '';
