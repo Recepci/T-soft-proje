@@ -23,7 +23,6 @@ $font:normal;
 body {
     margin: 0px;
     padding: 0px;
-    background-color: black;
     font-family: 'Poppins', sans-serif !important;
     overflow-x: hidden !important;
     header {
@@ -52,30 +51,41 @@ body {
                     }
                 }
             }
-        }
-        ul {
-            list-style: $try;
-            color: $color;
-            .btn {
-                background-color: $color;
-                color: $color1;
-                border-radius: 10px;
+            ul {
+                list-style: $try;
+                color: $color;
+                .btn {
+                    background-color: $color;
+                    color: $color1;
+                    border-radius: 10px;
+                }
             }
-        }
-        .drop {
-            display: flex;
-            justify-content: flex-end;
-            .dropleft {
-                .dropdown {
-                    ul {
-                        li {
-                            opacity: 0.7;
-                            &:hover {
-                                font-size: 18px;
-                                color: $color;
+            .drop {
+                display: flex;
+                justify-content: flex-end;
+                .dropleft {
+                    .dropdown {
+                        ul {
+                            li {
+                                opacity: 0.7;
+                                &:hover {
+                                    font-size: 18px;
+                                    color: $color;
+                                }
                             }
                         }
                     }
+                }
+            }
+            @media (max-width:576px) {
+                .logo {
+                    display: contents;
+                }
+                .menu {
+                    display: none !important;
+                }
+                .drop {
+                    display: block;
                 }
             }
         }
@@ -84,6 +94,7 @@ body {
         background-color: #FCFCFF;
         width: 100%;
         border-top: 1px solid #EFEFFF;
+        padding-bottom: 10rem;
         .area {
             .area_one {
                 color: $color2;
@@ -122,12 +133,11 @@ body {
                         align-items: center;
                         margin: 0 auto;
                     }
-                    .sareah_area {
-                        form {
-                            input {
-                                border: none;
-                            }
-                        }
+                    .search_glass {
+                        opacity: 0.5;
+                    }
+                    input {
+                        border: none;
                     }
                 }
             }
@@ -226,33 +236,45 @@ body {
             .scroll-by,
             .menu-bar,
             .app-bar {
-                font-size: 10px;
+                font-size: 14px;
             }
         }
     }
     article {
-        .art {
-            .art_images {
-                width: 90%;
-                height: auto;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin: 0 auto;
-                object-fit: cover;
-            }
-            &.bottom {
-                .mask {
+        .myUL {
+            display: contents;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            list-style: $try;
+            .art {
+                .art_images {
+                    width: 90%;
                     height: auto;
-                    width: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 auto;
+                    object-fit: cover;
                 }
-                .p-con {
-                    p {
-                        display: flex !important;
-                        align-items: center !important;
-                        justify-content: center !important;
-                        margin: 0 auto !important;
+                &.bottom {
+                    .mask {
+                        height: auto;
+                        width: auto;
                     }
+                    .p-con {
+                        jus p {
+                            display: flex !important;
+                            align-items: center !important;
+                            justify-content: center !important;
+                            margin: 0 auto !important;
+                        }
+                    }
+                }
+            }
+            @media (min-width: 768px) {
+                .myUL {
+                    display: inline-block !important;
                 }
             }
         }

@@ -8,7 +8,7 @@
 
     <title>T-soft Proje</title>
     <!-- SCSS -->
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="Style/main.css">
     <!-- Bootstrap  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <!-- Bootstrap 5 -->
@@ -26,13 +26,13 @@
     <header class="mt-4">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-3 col-xl-3 col-xxl-3 col-md-4 col-sm-4 col-xs-3">
-                    <div class="logo">
+                <div class=" logo col-lg-3 col-xl-3 col-xxl-3 col-md-4 col-sm-4 col-xs-3">
+                    <div class="logo_img">
                         <img src="assets/images/Combined Shape.png" alt="shape">
                         <img src="assets/images/DesignDaily.png" alt="DesingDaily">
                     </div>
                 </div>
-                <div class="navbar col-lg-5 col-xl-5 col-xxl-5 col-md-1 col-sm-1 col-xs-1 ">
+                <div class=" col-lg-6 col-xl-6 col-xxl-6 col-md-1 col-sm-1 col-xs-1 ">
                     <div class="menu d-block  d-md-none d-sm-none d-xs-none d-lg-block">
                         <ul class="list_one d-flex">
                             <li><a href="#">Free design</a></li>
@@ -45,7 +45,7 @@
                     <!--Açılır menu kodu : aria-expanded="false"-->
 
                 </div>
-                <div class="col-lg-4 col-xl-4 col-xxl-4 col-md-4 col-sm-4 col-xs-4">
+                <div class="col-lg-3 col-xl-3 col-xxl-3 col-md-4 col-sm-4 col-xs-4">
                     <div class="button ">
                         <ul class="list_two d-flex justify-content-end">
                             <li class="mr-3 mt-2">Log in</li>
@@ -88,16 +88,16 @@
                     </p>
                 </div>
                 <div class="search ">
-                    <div class="row w-100">
+                    <div class="row">
                         <div class="col-4 search_free d-flex w-25 pt-3">
                             <p>Free desing <i class="fa-solid fa-chevron-down"></i></p>
                         </div>
-                        <div class="col-1 searc_icon pt-3 w-5 h-75">
-                            <p>|</p>
+                        <div class="col-1 searc_icon pt-1 w-5 h-75">
+                            <img src="assets/images/Rectangle 13.png" alt="ı">
                         </div>
 
                         <div class="col-7 saerch_area w-70 pt-2 d-flex ">
-                            <div class="search_glass mr-3">
+                            <div class="search_glass mr-1">
                                 <img src="assets/images/chevron-down.png" alt="search-icon ">
                             </div>
                             <form action="index.html" method="get">
@@ -157,66 +157,47 @@
     <article>
         <div class="container-fluid">
             <div class="row ">
-                <div class="col-lg-4 col-md-6 col-md-6 col-sm-6 col-xs art"><img src="assets/images/Group 20.png" alt="group 20" class="art_images">
-                    <div class="container art_bottom mt-3">
-                        <div class="row">
-                            <div class="col-6 mask "><img src="assets/images/Mask Group.png" alt="Mask"> by <b>Jenny Molla</b>
-                            </div>
-                            <div class="col-6 d-flex p-con">
-                                <p><i class="fa-solid fa-code"></i>25</p>
-                                <p><i class="fa-solid fa-hand-holding-hand"></i>25</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-md-6 col-sm-6 col-xs art"><img src="assets/images/Group 21.png" alt="group" class="art_images">
-                    <div class="container art_bottom mt-3">
-                        <div class="row">
-                            <div class="col-6 mask "><img src="assets/images/Mask Group.png" alt="Mask"> by <b>Jenny Molla</b>
-                            </div>
-                            <div class="col-6 d-flex p-con">
-                                <p><i class="fa-solid fa-code"></i>25</p>
-                                <p><i class="fa-solid fa-hand-holding-hand"></i>25</p>
+                <div id="myUL" class="myUL">
+                    <li class="col-lg-4 col-md-6 col-md-6 col-sm-6 col-xs art"><img src="assets/images/Group 20.png" alt="group 20" class="art_images">
+                        <div class="container art_bottom mt-3">
+                            <div class="row">
+                                <div class="col-6 mask "><img src="assets/images/Mask Group.png" alt="Mask"> by <b>Jenny Molla</b>
+                                </div>
+                                <div class="col-6 d-flex p-con justify-content-evenly">
+                                    <a><i class="fa-solid fa-code"></i>24</a>
+                                    <a><img src="assets/images/appreciate.png" alt="hand"> 24</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-md-6 col-sm-6 col-xs art"><img src="assets/images/Group 22.png" alt="group" class="art_images">
-                    <div class="container-fluid art_bottom mt-3">
-                        <div class="row">
-                            <div class="col-6 mask "><img src="assets/images/Mask Group.png" alt="Mask"> by <b>Jenny Molla</b>
+                    </li>
+                    <li class="col-lg-4 col-md-6 col-md-6 col-sm-6 col-xs art"><img src="assets/images/Group 21.png" alt="group" class="art_images">
+                        <div class="container art_bottom mt-3">
+                            <div class="row">
+                                <div class="col-6 mask "><img src="assets/images/Mask Group.png" alt="Mask"> by <b>Jenny Molla</b>
+                                </div>
+                                <div class="col-6 d-flex p-con justify-content-evenly">
+                                    <a><i class="fa-solid fa-code"></i>25</a>
+                                    <a><img src="assets/images/appreciate.png" alt="hand">25</a>
+                                </div>
                             </div>
-                            <div class="col-6 d-flex p-con">
-                                <p><i class="fa-solid fa-code"></i>25</p>
-                                <p><i class="fa-solid fa-hand-holding-hand"></i>25</p>
+                        </div>
+                    </li>
+                    <li class="col-lg-4 col-md-6 col-md-6 col-sm-6 col-xs art"><img src="assets/images/Group 22.png" alt="group" class="art_images">
+                        <div class="container-fluid art_bottom mt-3">
+                            <div class="row">
+                                <div class="col-6 mask "><img src="assets/images/Mask Group.png" alt="Mask"> by <b>Jenny Molla</b>
+                                </div>
+                                <div class="col-6 d-flex p-con justify-content-evenly">
+                                    <a><i class="fa-solid fa-code"></i>26</a>
+                                    <a><img src="assets/images/appreciate.png" alt="hand">26</a>
 
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </li>
                 </div>
             </div>
         </div>
-        <!-- 
-
-        <div id="search-container">
-            <form id="search-form">
-                <input id="search" type="search">
-                <ul class="list-group list-group-flush text-primary">
-                    <li class="list-group-item p3"><a href="#">Ubuntu Deskop</a></li>
-                    <li class="list-group-item p3"><a href="#">Ubuntu Serve</a></li>
-                    <li class="list-group-item p3"><a href="#">Ubuntu Serve</a></li>
-                    <li class="list-group-item p3"><a href="#">Download</a></li>
-                    <li class="list-group-item p3"><a href="#">Trello</a></li>
-                    <li class="list-group-item p3"><a href="#">Asana</a></li>
-                </ul>
-            </form>
-        </div>
-       End search-box 
-
-        <a id="search-btn" class="search-icon" href="#">search</a>
-
-        <div id="search-results"></div> 
-        End search-results -->
     </article>
     <!-- Bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
@@ -227,31 +208,6 @@
 
 </body>
 <script>
-    // document.querySelector('#search-input')
-    //     .addEventListener('input', filterList);
-
-    // function filterList() {
-    //     const searchInput = document.querySelector('#search-input');
-    //     const filter = searchInput.value.toLowerCase();
-    //     const listItem = document.querySelectorAll('.list-group-item');
-    //     listItem.forEach((item) => {
-    //         let text = item.textContent;
-
-    //         if (searchInput.value.length === false) {
-    //             item.style.display = "none";
-    //         }
-    //         if (text.toLowerCase().includes(filter.toLowerCase())) {
-
-    //             item.style.display = '';
-
-    //         } else {
-    //             item.style.display = 'none';
-    //         }
-
-    //     });
-
-    // }
-
     list = document.getElementById("myUL");
     box = document.getElementById("search-input");
 
