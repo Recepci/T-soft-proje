@@ -75,7 +75,7 @@
     </header>
     <main class="middle">
         <div class="container-fluid">
-            <div class=" area" style="padding-bottom: 10rem;">
+            <div class=" area pb-5">
                 <div class="area_one mt-4 ml-4">
                     Day 1384
                 </div>
@@ -88,30 +88,26 @@
                     </p>
                 </div>
                 <div class="search ">
-                    <div class="row" style="width: 651px;">
-                        <div class="col-4 search_free d-flex">
+                    <div class="row w-100">
+                        <div class="col-4 search_free d-flex w-25 pt-3">
                             <p>Free desing <i class="fa-solid fa-chevron-down"></i></p>
                         </div>
-                        <div class="col-1 searc_icon">
+                        <div class="col-1 searc_icon pt-3 w-5 h-75">
                             <p>|</p>
                         </div>
-                        <div class="col-7 saerch_area">
+
+                        <div class="col-7 saerch_area w-70 pt-2 d-flex ">
+                            <div class="search_glass mr-3">
+                                <img src="assets/images/chevron-down.png" alt="search-icon ">
+                            </div>
                             <form action="index.html" method="get">
-                                <input class="form-control" type="text" name="Search" placeholder="Search" id="search-input">
-                                <ul class="list-group list-group-flush text-primary">
-                                    <li class="list-group-item p3"><a href="#">Ubuntu Deskop</a></li>
-                                    <li class="list-group-item p3"><a href="#">Ubuntu Serve</a></li>
-                                    <li class="list-group-item p3"><a href="#">Ubuntu Serve</a></li>
-                                    <li class="list-group-item p3"><a href="#">Download</a></li>
-                                    <li class="list-group-item p3"><a href="#">Trello</a></li>
-                                    <li class="list-group-item p3"><a href="#">Asana</a></li>
-                                </ul>
+                                <input onkeyup="SearchFunction()" class="form-control" type="text" name="Search" placeholder="Search" id="search-input">
                             </form>
                         </div>
+
                     </div>
                 </div>
             </div>
-        </div>
     </main>
     <nav>
         <div class="container-fluid mt-5">
@@ -200,6 +196,27 @@
                 </div>
             </div>
         </div>
+        <!-- 
+
+        <div id="search-container">
+            <form id="search-form">
+                <input id="search" type="search">
+                <ul class="list-group list-group-flush text-primary">
+                    <li class="list-group-item p3"><a href="#">Ubuntu Deskop</a></li>
+                    <li class="list-group-item p3"><a href="#">Ubuntu Serve</a></li>
+                    <li class="list-group-item p3"><a href="#">Ubuntu Serve</a></li>
+                    <li class="list-group-item p3"><a href="#">Download</a></li>
+                    <li class="list-group-item p3"><a href="#">Trello</a></li>
+                    <li class="list-group-item p3"><a href="#">Asana</a></li>
+                </ul>
+            </form>
+        </div>
+       End search-box 
+
+        <a id="search-btn" class="search-icon" href="#">search</a>
+
+        <div id="search-results"></div> 
+        End search-results -->
     </article>
     <!-- Bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
@@ -210,28 +227,56 @@
 
 </body>
 <script>
-    document.querySelector('#search-input')
-        .addEventListener('input', filterList);
+    // document.querySelector('#search-input')
+    //     .addEventListener('input', filterList);
 
-    function filterList() {
-        const searchInput = document.querySelector('#search-input');
-        const filter = searchInput.value.toLowerCase();
-        const listItem = document.querySelectorAll('.list-group-item');
-        listItem.forEach((item) => {
-            let text = item.textContent;
+    // function filterList() {
+    //     const searchInput = document.querySelector('#search-input');
+    //     const filter = searchInput.value.toLowerCase();
+    //     const listItem = document.querySelectorAll('.list-group-item');
+    //     listItem.forEach((item) => {
+    //         let text = item.textContent;
 
-            if (searchInput.value.length === false) {
-                item.style.display = "none";
-            }
-            if (text.toLowerCase().includes(filter.toLowerCase())) {
+    //         if (searchInput.value.length === false) {
+    //             item.style.display = "none";
+    //         }
+    //         if (text.toLowerCase().includes(filter.toLowerCase())) {
 
-                item.style.display = '';
+    //             item.style.display = '';
 
+    //         } else {
+    //             item.style.display = 'none';
+    //         }
+
+    //     });
+
+    // }
+
+    list = document.getElementById("myUL");
+    box = document.getElementById("search-input");
+
+
+    function SearchFunction() {
+
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("search-input");
+        filter = input.value.toUpperCase();
+
+        li = list.getElementsByTagName("li");
+
+
+        for (i = 0; i < li.length; i++) {
+
+            a = li[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                list.style.display = "inline-flex";
+                li[i].style.display = "";
             } else {
-                item.style.display = 'none';
-            }
+                li[i].style.display = "none";
 
-        });
+            }
+        }
 
     }
 </script>
